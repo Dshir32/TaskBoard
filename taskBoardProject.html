@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=".\taskBoardProject.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    <title>MY TASK BOARD</title>
+</head>
+<body onload="showTasksToPage()">
+
+<h1 class="main-header"></h1>
+<br><br>
+<form id="tasksForm">
+
+    <table>
+        <tr>
+            <td>Assignment : </td>
+            <td><input id="text" type="text" name="assignment" required></td>
+            <td><span id="textAlert" class="alert"></span></td>
+        </tr>
+        <tr>
+            <td>Due date : </td>
+            <td><input id="date" type="date" name="date" required></td>
+            <td><span id="dateAlert" class="alert"></span></td>
+        </tr>
+        <tr>
+            <td>Time : </td>
+            <td><input id="time" type="time" name="usr_time"></td>
+            <td><span id="timeAlert" class="alert"></span></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-success" onclick="createTask()">Add task</button></td>
+            <td><button type="button" class="btn btn-warning" onclick="clearForm()">Clear form</button></td>
+            <td><button type="button" class="btn btn-danger" onclick="clearAllTasks()">Clear All Tasks</button></td>
+        </tr>
+    </table>    
+    <br><br>
+    
+    
+</form>
+<br><br>
+<div id=tasksContainer></div>
+
+<br><br>
+<!-- Fix footer to be sticked to bottom of page -->
+<footer class="footer mt-auto py-3" id="footer">
+    <div class="container">
+      <span>All rights reserved &#9400;</span>
+    </div>
+</footer>
+
+<script src="jquery-3.4.1.js"></script>
+<script src=".\taskBoardProject.js"></script>
+<!-- Bootstrap CDN -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

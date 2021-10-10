@@ -1,0 +1,153 @@
+ 
+body , html{
+	background: url('./assets/tile.jpg');
+}
+
+.main-header {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: center;
+	background: url('./assets/title.png');
+	background-repeat: no-repeat;
+	height: 45px;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+form {
+	background: url('./assets/formbg.jpg');
+	    height: 300px;
+      width:550px;
+      margin: auto;
+
+}
+
+table{
+	margin: auto;
+}
+
+table tr {
+	    line-height: 2.7;
+	    font-size: 24px;
+}
+
+input {
+	height:27px;
+	width:250px;
+}
+
+div#tasksContainer div.taskContainer {
+	width:200px;
+	height:250px;
+	background: lightyellow;
+	display: inline-block;
+	position: relative;
+	background: url('./assets/notebg.png');
+}
+
+div.taskContainer p.task {
+	position: absolute;
+	top:40px;
+	left: 5px;
+	width:140px;
+	height:140px;
+	margin: 10px;
+  overflow: scroll;
+}
+/* Make scrollbar invisible but still functioning */
+div.taskContainer p.task::-webkit-scrollbar {
+  display: none;
+}
+
+div.taskContainer p.due {
+	position: absolute;;
+	bottom: 15px;
+	left: 5px;
+	margin: 10px;
+	width: 140px;
+	height:25px;
+}
+
+span.alert {
+  color: red;
+  font-size: 60%;
+}
+
+div.taskContainer button.closeButton { 
+	display: none;
+	right: 25px;
+  top:20px;
+  position: absolute;
+  top: 21px;
+  height: 22px;
+  border: none;
+  background:#feff99;
+}
+
+div.taskContainer:hover button.closeButton { 
+	display: inline;
+  height: 25px;
+  border: none;
+}
+#tasksContainer{
+  padding: 35px;
+}
+footer.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
