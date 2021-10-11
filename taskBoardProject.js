@@ -1,4 +1,4 @@
-let allTasks = [];
+var allTasks = [];
 const textInputElement = document.getElementById('text');
 const dateInputElement = document.getElementById('date');
 const timeInputElement = document.getElementById('time');
@@ -87,21 +87,19 @@ function removeTask(index){
 function showTasksToPage(){
     var tasksContainer = document.getElementById("tasksContainer");
     // Clear the page from all shown tasks
-    tasksContainer.innerHTML = "";
-    if( localStorage.getItem("tasks") != "" && localStorage.getItem("tasks") != null){
-        let taskExist = JSON.parse(localStorage.getItem("tasks"));
-        if(taskExist.length > 0){
-            for(var i = 0; i < taskExist.length ; i++) { // Loop through all tasks on local storage and HTML them to page
-                var taskDiv = `
-                <div class="taskContainer fade-in" id="taskContainer_${i}">
-                    <button class="closeButton" type="button" class="btn btn-default" aria-label="Close">
-                        <span onclick="removeTask(${i})" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
-                    <p class="task">${taskExist[i].task}</p>
-                    <p class="due">Due: ${taskExist[i].date} <br> ${taskExist[i].time}</p>
-                </div>`;
-                tasksContainer.innerHTML += taskDiv;
-            }
-        }   
+    tasksContainer.innerHTML = ""; debugger;
+    if( localStorage.getItem("tasks") != "" && localStorage.getItem("tasks") != null) {
+        allTasks = JSON.parse(localStorage.getItem("tasks"));
+        for(var i = 0; i < allTasks.length ; i++) { // Loop through all tasks on local storage and HTML them to page
+            var taskDiv = `
+            <div class="taskContainer fade-in" id="taskContainer_${i}">
+                <button class="closeButton" type="button" class="btn btn-default" aria-label="Close">
+                    <span onclick="removeTask(${i})" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+                <p class="task">${allTasks[i].task}</p>
+                <p class="due">Due: ${allTasks[i].date} <br> ${allTasks[i].time}</p>
+            </div>`;
+            tasksContainer.innerHTML += taskDiv;
+        }
     }  
 }
