@@ -89,8 +89,8 @@ function showTasksToPage(){
     // Clear the page from all shown tasks
     tasksContainer.innerHTML = "";
     if( localStorage.getItem("tasks") != "" && localStorage.getItem("tasks") != null){
-        taskExist = JSON.parse(localStorage.getItem("tasks"));
-        if(taskExist){
+        let taskExist = JSON.parse(localStorage.getItem("tasks"));
+        if(taskExist.length > 0){
             for(var i = 0; i < taskExist.length ; i++) { // Loop through all tasks on local storage and HTML them to page
                 var taskDiv = `
                 <div class="taskContainer fade-in" id="taskContainer_${i}">
