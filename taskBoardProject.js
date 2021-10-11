@@ -88,9 +88,9 @@ function showTasksToPage(){
     var tasksContainer = document.getElementById("tasksContainer");
     // Clear the page from all shown tasks
     tasksContainer.innerHTML = "";
-    if(localStorage.getItem("tasks") !=""){
+    if( localStorage.getItem("tasks") != "" && localStorage.getItem("tasks") != null){
         allTasks = JSON.parse(localStorage.getItem("tasks"));
-    for(var i = 0; i < allTasks.length ; i++) { // Loop through all tasks on local storage and HTML them to page
+        for(var i = 0; i < allTasks.length ; i++) { // Loop through all tasks on local storage and HTML them to page
             var taskDiv = `
             <div class="taskContainer fade-in" id="taskContainer_${i}">
                 <button class="closeButton" type="button" class="btn btn-default" aria-label="Close">
@@ -100,6 +100,6 @@ function showTasksToPage(){
                 <p class="due">Due: ${allTasks[i].date} <br> ${allTasks[i].time}</p>
             </div>`;
             tasksContainer.innerHTML += taskDiv;
-    }
+        }
     }  
 }
