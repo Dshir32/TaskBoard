@@ -87,7 +87,7 @@ function removeTask(index){
 function showTasksToPage(){
     var tasksContainer = document.getElementById("tasksContainer");
     // Clear the page from all shown tasks
-    tasksContainer.innerHTML = ""; debugger;
+    tasksContainer.innerHTML = "";
     if( localStorage.getItem("tasks") != "" && localStorage.getItem("tasks") != null) {
         allTasks = JSON.parse(localStorage.getItem("tasks"));
         for(var i = 0; i < allTasks.length ; i++) { // Loop through all tasks on local storage and HTML them to page
